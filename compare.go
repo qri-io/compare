@@ -63,7 +63,7 @@ func Interface(a, b interface{}) error {
 	case bool:
 		if bt, ok := b.(bool); ok {
 			if at != bt {
-				return fmt.Errorf("boolean mismatch: %s != %s", at, bt)
+				return fmt.Errorf("boolean mismatch: %v != %v", at, bt)
 			}
 		} else {
 			return fmt.Errorf("type mismatch: %v != %v", a, b)
